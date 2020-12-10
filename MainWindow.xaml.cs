@@ -22,7 +22,7 @@ namespace MatchGame
 
     public partial class MainWindow : Window
     {
-        DispatcherTimer timer = new DispatcherTimer();
+        readonly DispatcherTimer timer = new DispatcherTimer();
         int tenthsOfSecondsElapsed;
         int matchesFound;
 
@@ -42,7 +42,7 @@ namespace MatchGame
             if (matchesFound == 8)
             {
                 timer.Stop();
-                timeTextBlock.Text = timeTextBlock.Text + " - Play again?";
+                timeTextBlock.Text += " - Play again?";
             }
         }
 
